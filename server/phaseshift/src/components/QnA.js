@@ -1,16 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import './Qna.css'
 import api from './../api'
 const QnA=(props)=>{
-  const [check, setcheck] = useState(false);
-  const [key, setkey] = useState("");
       async function abcd(event){
         event.preventDefault();
         let ans=document.querySelectorAll('.feild')[props.num-1].value;
-        let checkk=await api.get(`/?theme=${props.theme}&qnum=${props.num}&answer=${ans}`);
-        console.log(checkk.data.status);
-        setcheck(checkk.data.status);
-        setkey(checkk.data.key);
+        let check=await api.get(`/?theme=${props.theme}&qnum=${props.num}&answer=${ans}`);
+        console.log(check.data)
     }
     return(
     <>
@@ -20,8 +16,7 @@ const QnA=(props)=>{
             <p>{props.question}</p>
             <form>
             <input className="feild" type="text" required /><br/>
-            <input type="submit" className="btn" onClick={abcd} value="Submit" style={check==="true"?{display:"none"}:{display:"inline-block"}}/>
-            <h1>{key}</h1>
+            <input type="submit" className="btn" onClick={abcd} value="Submit"/>
             </form>
     </div>
         
