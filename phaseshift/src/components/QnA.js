@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './Qna.css'
 import api from './../api'
 const QnA=(props)=>{
+  console.log(props.image);
   const [check, setcheck] = useState(false);
   const [key, setkey] = useState("");
       async function abcd(event){
@@ -14,17 +15,20 @@ const QnA=(props)=>{
     }
     return(
     <>
+    <center>
     <div className="question">
             <h1>Question {props.num}</h1>
             <hr/>
             <p>{props.question}</p>
             <form>
+            <img src={props.image} style={props.image?{height:"75%", width:"90%"}:{display:"none"}} alt="fd"/>
+            <br/>
             <input className="feild" type="text" required /><br/>
             <input type="submit" className="btn" onClick={abcd} value="Submit" style={check==="true"?{display:"none"}:{display:"inline-block"}}/>
             <h1>{key}</h1>
             </form>
     </div>
-        
+    </center>
     </>
     )
 }

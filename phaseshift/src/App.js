@@ -1,26 +1,42 @@
 import './App.css';
-import Qna from './components/QnA'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Q1 from './Round1/Q1';
+import Q2 from './Round1/Q2';
+import Q3 from './Round1/Q3';
+import Q4 from './Round1/Q4';
+import Q12 from './Round2/Q12'
+import Q22 from './Round2/Q22'
+import Q32 from './Round2/Q32'
+import Q42 from './Round2/Q42'
+import Q13 from './Round3/Q13';
+import Q23 from './Round3/Q23';
+import Q33 from './Round3/Q33';
+import Q43 from './Round3/Q43';
 function App() {
   return (
-    <div className="App">
-    <h1> Round 1</h1>
-      
-     <Qna num={1} question="The clock ticks backward,,,faster,,,,still faster."\n" All of a sudden the whizzing stops,and you step into a year you have never known"\n" “Kai su teknon ” he says"\n" .“UHCPNHAL FVBY ULEA”"\n" The above is the tag line of a famous company,decode it ? "\n"Also name the founder of the company" theme="1"/>
-     <Qna num={2} question="Think different” but not too different."\n" Wow!!!! What an ambitious student he was … He went up to an extent of hacking the university computer system, which got him expelled from the university."\n" But there was no looking back. "\n"He is the pioneer of the famous tech company. Name him." theme="1"/>
-     <Qna num={3} question="Decode the logo above and refer the decoded word to a physical thing which refers to a company whose parent organisation is responsible for a major digital disruption. Name the parent organisation." theme="1"  image="https://ibb.co/cwbY8MY"/>  
-     <Qna num={4} question="John Logie Baird featured the first RGB color transmission in 1928."\n" The color model is based on the theory of trichromatic color vision."\n" Each parameter, red, green and blue, displays the intensity of the color as an integer between 0 and 255."\n"70686f746f706561"\n"https://photos.app.goo.gl/TYAJgsXoeQ6fHe987"\n"Name the company involved" theme="1"/>
-     
-       
-     <Qna num={5} question=" Global Economic Dominance is sought to be achieved by China by 2030."\n" We humans, both male and female prefer the sound of a female voice One of its first kind was created in 1965 which could automatically detect unknown forms of treatment"\n" Dear Watson, thanks for leading my way to my family’s heart."\n" All of this revolves around a specific technology."\n" When was it first spoken about?"\n" Enter the last character of your answer." theme="2"/> 
-     <Qna num={6} question="As science and technology progresses new technologies are created which changes the view of the world,then the technology proves to be a boon, but sometimes it can lead to the most fatal disasters that the mankind will ever see."\n" The design flaw in a technology lead to major disaster which happened at location 3."\n"Name the technology responsible for the disaster" theme="2"/>
-     <Qna num={7} question="42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42"\n"42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42"\n"42 42 42 42 42 #FFF000  #80C964 42 42 42 42 42"\n"42 42 42 42 42 #00DBFF #FCC201 42 42 42 42 42"\n"42 42  42 42 77 73 67 82 79 83 79 70 84 42 42 42 "\n"42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42"\n"42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42"\n" Above is the logo of the company, name it."\n"and decode the code below." theme="2"/>
-     <Qna num={8} question="Refer to the code below and decode the format below and refer the what it is indicating?" theme="2"/>
-       
-     <Qna num={9} question="Case study1:"\n" There is always a quest to understand what sews the universe together but soon the deepest mysteries of the world will be unravelled. They completed the standard model using the planets largest machine whose detectors detect subtle patterns using complex computations."\n" These experiments produce 1 petabyte of data per second, analysing this data requires almost a million CPU cores in 170 locations across the world !!!!"\n" Case study 2:"\n" Since their start using ligroin they have come a long way moving goods and people across the globe. Now the industry is transiting into a new age, we have to reduce our burden on the planet.They aim to be carbon neutral."\n" The world knows to make a battery but no one really knows what happens inside a battery at molecular level while it’s working. simulating its working involves accounting for a tremendous number of electron interactions each electron influencing the other in complex ways. It takes many days to perform the simulation using the current known algorithms which makes the process laborious!!!!!."\n" The above cases have a common limitation and they have joined hands with a company"\n" which has a possible solution."\n" Name the company’s first machine designed which has the potential to be the solution. (18.9297,72.8336)   82 74 88 79 68  is famous for what disruptive technology?"theme="3"/>
-     <Qna num={10}question="1. QUIET ZONE"\n"2. DETECTION MARKERS"\n"3. ALIGNMENT PATTERN"\n"4. TIMING PATTERN"\n"5. VERSION INFORMATION"\n"6. FORMAT INFORMATION"\n"7. DATA AND CORRECTION KEYS"\n"All of these are part of a disruptive technology that a company(a Japanese company) inventd or discovered as part of making their detailed production control a lot easier."\n"We use it almost everyday and more frequently from the past 1 yrWhat am I talking about?" theme="3"/>
-     <Qna num={11}question="Carl Kinsley had invented a method that would let us telegraphically print or denote numbers and letters."\n" This technology has been found in patents as early as in the 20 the century and the same is being used, even now."\n"0110111  0111110 1110111 0101010 1110111 100111 000110"\n"The above company A along with company B was responsible for the building something revolutionary for the first time in India, name the company A and B." theme="3"/>
-     <Qna num={12}question="The pulse was heard at 14.0147AE147AE147AE147B(H) MHz ."\n"Somewhere in the executive office building at 10:40 a.m, there was chaos in the air"\n"He said three “stark facts” that they need to look at…"\n"The above crisis lead to the formation of two major agencies, and one among them is the reason for modern globalization."\n"Name the agency.  
-    </div>
+   <>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Q1/>}/>
+        <Route exact path="/Round1/Q1" element={<Q1/>}/>
+        <Route exact path="/Round1/Q2" element={<Q2/>}/>
+        <Route exact path="/Round1/Q3" element={<Q3/>}/>
+        <Route exact path="/Round1/Q4" element={<Q4/>}/>
+
+        <Route exact path="/Round2/Q1" element={<Q12/>}/>
+        <Route exact path="/Round2/Q2" element={<Q22/>}/>
+        <Route exact path="/Round2/Q3" element={<Q32/>}/>
+        <Route exact path="/Round2/Q4" element={<Q42/>}/>
+
+        <Route exact path="/Round3/Q1" element={<Q13/>}/>
+        <Route exact path="/Round3/Q2" element={<Q23/>}/>
+        <Route exact path="/Round3/Q3" element={<Q33/>}/>
+        <Route exact path="/Round3/Q4" element={<Q43/>}/>
+
+
+      </Routes>
+    </Router>
+   </>
   );
 }
 
