@@ -12,8 +12,7 @@ function App() {
      
        
      <Qna num={5} question=" Global Economic Dominance is sought to be achieved by China by 2030 We humans, both male and female prefer the sound of a female voice One of its first kind was created in 1965 which could automatically detect unknown forms of treatment Dear Watson, thanks for leading my way to my family’s heart. All of this revolves around a specific technology. When was it first spoken about? Enter the last character of your answer." theme="2"/> 
-     
-     <Qna num={5} question="what is your fav color" theme="3"/>
+     <Qna num={6} question="As science and technology progresses new technologies are created which changes the view of the world,then the technology proves to be a boon, but sometimes it can lead to the most fatal disasters that the mankind will ever see. The design flaw in a technology lead to major disaster which happened at location 3.Name the technology responsible for the disaster" theme="2"/>
     </div>
   );
 }
