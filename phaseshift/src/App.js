@@ -18,20 +18,20 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Q1/>}/>
-        <Route exact path="/Round1/Q1" element={<Q1/>}/>
-        <Route exact path="/Round1/Q2" element={<Q2/>}/>
-        <Route exact path="/Round1/Q3" element={<Q3/>}/>
-        <Route exact path="/Round1/Q4" element={<Q4/>}/>
+        <Route exact path="/Q1" element={<Q1/>}/>
+        <Route exact path="/Q2" element={<Q2/>}/>
+        <Route exact path="/Q3" element={<Q3/>}/>
+        <Route exact path="/Q4" element={<Q4/>}/>
 
-        <Route exact path="/Round2/Q1" element={<Q12/>}/>
-        <Route exact path="/Round2/Q2" element={<Q22/>}/>
-        <Route exact path="/Round2/Q3" element={<Q32/>}/>
-        <Route exact path="/Round2/Q4" element={<Q42/>}/>
+        <Route exact path="/Q1" element={<Q12/>}/>
+        <Route exact path="/Q2" element={<Q22/>}/>
+        <Route exact path="/Q3" element={<Q32/>}/>
+        <Route exact path="/Q4" element={<Q42/>}/>
 
-        <Route exact path="/Round3/Q1" element={<Q13/>}/>
-        <Route exact path="/Round3/Q2" element={<Q23/>}/>
-        <Route exact path="/Round3/Q3" element={<Q33/>}/>
-        <Route exact path="/Round3/Q4" element={<Q43/>}/>
+        <Route exact path="/Q1" element={<Q13/>}/>
+        <Route exact path="/Q2" element={<Q23/>}/>
+        <Route exact path="/Q3" element={<Q33/>}/>
+        <Route exact path="/Q4" element={<Q43/>}/>
 
 
       </Routes>

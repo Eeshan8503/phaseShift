@@ -7,7 +7,7 @@ const QnA=(props)=>{
   const [key, setkey] = useState("");
       async function abcd(event){
         event.preventDefault();
-        let ans=document.querySelectorAll('.feild')[props.num-1].value;
+        let ans=document.querySelectorAll('.feild')[0].value;
         let checkk=await api.get(`/?theme=${props.theme}&qnum=${props.num}&answer=${ans}`);
         console.log(checkk.data.status);
         setcheck(checkk.data.status);
@@ -26,6 +26,7 @@ const QnA=(props)=>{
             <input className="feild" type="text" required /><br/>
             <input type="submit" className="btn" onClick={abcd} value="Submit" style={check==="true"?{display:"none"}:{display:"inline-block"}}/>
             <h1>{key}</h1>
+            <h3 style={check==="true"?{display:"inline"}:{display:"none"}}>Copy paste the key to hackerrank</h3>
             </form>
     </div>
     </center>
