@@ -20,11 +20,11 @@ const a={
     status:"false",
     key:""
 };
-app.get('/',function(req,res){
+1.  app.get('/',function(req,res){
     givenAns=req.query.answer;
     qnum=req.query.qnum;
     theme=req.query.theme;
-    if(qnum==1&&givenAns=='eeshan'&&theme==1){
+    if(qnum==1&&givenAns=='Infosys, Narayan Murthy'&&theme==1){
         a.status="true";
         a.key="part1OfKey"
         res.send(a);
@@ -34,5 +34,45 @@ app.get('/',function(req,res){
         a.key="";
         res.send(a);
     }
+    
+    2.if(qnum==2&&givenAns='Steve Wozniak'|| givenAns='Steve Woz'&&theme==1){
+        a.status="true";
+        a.key="part1OfKey"
+        res.send(a);
+    }
+    else{
+        a.status="false";
+        a.key="";
+        res.send(a);
+    }
+    
+ 3.     else if(qnum==3&&givenAns='Victor Hayes' || givenAns='Vic Hayes'&&theme==1){
+        a.status="true";
+        a.key="part1OfKey"
+        res.send(a);'
+        
+    }
+    else{
+        a.status="false";
+        a.key="";
+        res.send(a);
+    }
+    
+        
+    
+    4.else if(qnum==4&&givenAns=='Kodak'&&theme==1){
+        a.status="true";
+        a.key="part1OfKey"
+        res.send(a);
+    }
+    else{
+        a.status="false";
+        a.key="";
+        res.send(a);
+    }
+    
+    
+    
+        
     
 })
