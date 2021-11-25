@@ -20,145 +20,101 @@ const a={
     status:"false",
     key:""
 };
-  app.get('/',function(req,res){
-    givenAns=req.query.answer;
+app.get('/',function(req,res){
+    givenAns=req.query.answer.toLowerCase();
     qnum=req.query.qnum;
     theme=req.query.theme;
-    if(qnum==1&&givenAns=='Infosys, Narayan Murthy'&&theme==1){
+    if(qnum==1&&givenAns=='infosys, narayan murthy'&&theme==1){
         a.status="true";
-        a.key="part1OfKey"
-        res.send(a);
-    }
-    else{
-        a.status="false";
-        a.key="";
+        a.key="P36Ggsjlzz"
         res.send(a);
     }
     
-    else if(qnum==2&&givenAns=='Steve Wozniak'|| givenAns='Steve Woz'&&theme==1){
+    
+    else if(qnum==2&&givenAns=='Steve Wozniak'|| givenAns=='Steve Woz'&&theme==1){
         a.status="true";
-        a.key="part1OfKey"
+        a.key="MpcxTfoYie"
         res.send(a);
     }
-    else{
-        a.status="false";
-        a.key="";
-        res.send(a);
-    }
+    
     
     else if(qnum==3&&givenAns=='Victor Hayes' || givenAns=='Vic Hayes'&&theme==1){
         a.status="true";
-        a.key="part1OfKey"
-        res.send(a);'
+        a.key="Wn6HhyFlkH"
+        res.send(a);
         
     }
-    else{
-        a.status="false";
-        a.key="";
-        res.send(a);
-    }
+    
     
         
     
     else if(qnum==4&&givenAns=='Kodak'&&theme==1){
         a.status="true";
-        a.key="part1OfKey"
+        a.key="ATZyksW0FL"
         res.send(a);
     }
-    else{
-        a.status="false";
-        a.key="";
-        res.send(a);
-    }
+    
     
      else if(qnum==5&&givenAns=='1956, L'|| givenAns=='1956, E' &&theme==2){
         a.status="true";
-        a.key="part1OfKey"
+        a.key="5gJGg5SsYk"
         res.send(a);
     }
-    else{
-        a.status="false";
-        a.key="";
-        res.send(a);
-    }
+    
     
     else if(qnum==6&&givenAns=='MCAS' &&theme==2){
         a.status="true";
-        a.key="part1OfKey"
+        a.key="9YsXyThs8v"
         res.send(a);
     }
-    else{
-        a.status="false";
-        a.key="";
-        res.send(a);
-    }
+    
     
     else if(qnum==7&&givenAns=='Microsoft, Skype'&&theme==2){
         a.status="true";
-        a.key="part1OfKey"
+        a.key="CMitg7poob"
         res.send(a);
     }
-    else{
-        a.status="false";
-        a.key="";
-        res.send(a);
-    }
+    
     
     else if(qnum==8&&givenAns=='Dalal Street'&&theme==2){
         a.status="true";
-        a.key="part1OfKey"
+        a.key="CxDpejBCgc"
         res.send(a);
     }
-    else{
-        a.status="false";
-        a.key="";
-        res.send(a);
-    }
+    
     
     else if(qnum==9&&givenAns=='Cern, Mercedes Benz'&&theme==3){
         a.status="true";
-        a.key="part1OfKey"
+        a.key="FDBBjjwlzQ"
         res.send(a);
     }
-    else{
-        a.status="false";
-        a.key="";
-        res.send(a);
-    }
+    
     
     else if(qnum==10&&givenAns=='QR CODE' &&theme==3){
         a.status="true";
-        a.key="part1OfKey"
+        a.key="XoPWTHCQcj"
         res.send(a);
     }
-    else{
-        a.status="false";
-        a.key="";
-        res.send(a);
-    }
+    
     
     else if(qnum==11&&givenAns=='          ANEEEEESH QUESTIONNNNNNNNNNNNNNNN           '&&theme==3){
         a.status="true";
-        a.key="part1OfKey"
+        a.key="zFLPGWDrTz"
         res.send(a);
     }
-    else{
-        a.status="false";
-        a.key="";
-        res.send(a);
-    }
+    
     
     else if(qnum==12&&givenAns=='ARPA' &&theme==3){
         a.status="true";
-        a.key="part1OfKey"
-        res.send(a);
-    }
-    else{
-        a.status="false";
-        a.key="";
+        a.key="bUQFhvlzPR"
         res.send(a);
     }
     
+    else{
+        a.status="false";
+        a.key="Oops Wrong Answer";
+        res.send(a);
+    }
     
     
     
@@ -166,3 +122,4 @@ const a={
         
     
 })
+

@@ -3,7 +3,7 @@ import './Qna.css'
 import api from './../api'
 const QnA=(props)=>{
   console.log(props.image);
-  const [check, setcheck] = useState(false);
+  const [check, setcheck] = useState(null);
   const [key, setkey] = useState("");
       async function abcd(event){
         event.preventDefault();
@@ -19,14 +19,16 @@ const QnA=(props)=>{
     <div className="question">
             <h1>Question {props.num}</h1>
             <hr/>
-            <p>{props.question}</p>
+            <p style={props.num===3||props.num===7?{display:"none"}:{display:"inline"}}>{props.question}</p>
+            <pre style={props.num===3 || props.num===7?{display:"inline"}:{display:"none"}} >{props.question}</pre>
             <form>
             <img src={props.image} style={props.image?{height:"75%", width:"90%"}:{display:"none"}} alt="fd"/>
             <br/>
             <input className="feild" type="text" required /><br/>
             <input type="submit" className="btn" onClick={abcd} value="Submit" style={check==="true"?{display:"none"}:{display:"inline-block"}}/>
             <h1>{key}</h1>
-            <h3 style={check==="true"?{display:"inline"}:{display:"none"}}>Copy paste the key to hackerrank</h3>
+            <h3 style={check==="true"?{display:"inline", color:"#d4d6d5"}:{display:"none"}}>Copy paste the key to hackerrank</h3>
+
             </form>
     </div>
     </center>

@@ -23,15 +23,15 @@ function App() {
         <Route exact path="/Q3" element={<Q3/>}/>
         <Route exact path="/Q4" element={<Q4/>}/>
 
-        <Route exact path="/Q1" element={<Q12/>}/>
-        <Route exact path="/Q2" element={<Q22/>}/>
-        <Route exact path="/Q3" element={<Q32/>}/>
-        <Route exact path="/Q4" element={<Q42/>}/>
+        <Route exact path="/Q12" element={<Q12/>}/>
+        <Route exact path="/Q22" element={<Q22/>}/>
+        <Route exact path="/Q32" element={<Q32/>}/>
+        <Route exact path="/Q42" element={<Q42/>}/>
 
-        <Route exact path="/Q1" element={<Q13/>}/>
-        <Route exact path="/Q2" element={<Q23/>}/>
-        <Route exact path="/Q3" element={<Q33/>}/>
-        <Route exact path="/Q4" element={<Q43/>}/>
+        <Route exact path="/Q13" element={<Q13/>}/>
+        <Route exact path="/Q23" element={<Q23/>}/>
+        <Route exact path="/Q33" element={<Q33/>}/>
+        <Route exact path="/Q43" element={<Q43/>}/>
 
 
       </Routes>
