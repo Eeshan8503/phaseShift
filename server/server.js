@@ -35,7 +35,7 @@ const a={
         res.send(a);
     }
     
-    2.if(qnum==2&&givenAns='Steve Wozniak'|| givenAns='Steve Woz'&&theme==1){
+    else if(qnum==2&&givenAns=='Steve Wozniak'|| givenAns='Steve Woz'&&theme==1){
         a.status="true";
         a.key="part1OfKey"
         res.send(a);
@@ -46,7 +46,7 @@ const a={
         res.send(a);
     }
     
- 3.     else if(qnum==3&&givenAns='Victor Hayes' || givenAns='Vic Hayes'&&theme==1){
+    else if(qnum==3&&givenAns=='Victor Hayes' || givenAns=='Vic Hayes'&&theme==1){
         a.status="true";
         a.key="part1OfKey"
         res.send(a);'
@@ -60,7 +60,7 @@ const a={
     
         
     
-    4.else if(qnum==4&&givenAns=='Kodak'&&theme==1){
+    else if(qnum==4&&givenAns=='Kodak'&&theme==1){
         a.status="true";
         a.key="part1OfKey"
         res.send(a);
@@ -70,6 +70,96 @@ const a={
         a.key="";
         res.send(a);
     }
+    
+     else if(qnum==5&&givenAns=='1956, L'|| givenAns=='1956, E' &&theme==2){
+        a.status="true";
+        a.key="part1OfKey"
+        res.send(a);
+    }
+    else{
+        a.status="false";
+        a.key="";
+        res.send(a);
+    }
+    
+    else if(qnum==6&&givenAns=='MCAS' &&theme==2){
+        a.status="true";
+        a.key="part1OfKey"
+        res.send(a);
+    }
+    else{
+        a.status="false";
+        a.key="";
+        res.send(a);
+    }
+    
+    else if(qnum==7&&givenAns=='Microsoft, Skype'&&theme==2){
+        a.status="true";
+        a.key="part1OfKey"
+        res.send(a);
+    }
+    else{
+        a.status="false";
+        a.key="";
+        res.send(a);
+    }
+    
+    else if(qnum==8&&givenAns=='Dalal Street'&&theme==2){
+        a.status="true";
+        a.key="part1OfKey"
+        res.send(a);
+    }
+    else{
+        a.status="false";
+        a.key="";
+        res.send(a);
+    }
+    
+    else if(qnum==9&&givenAns=='Cern, Mercedes Benz'&&theme==3){
+        a.status="true";
+        a.key="part1OfKey"
+        res.send(a);
+    }
+    else{
+        a.status="false";
+        a.key="";
+        res.send(a);
+    }
+    
+    else if(qnum==10&&givenAns=='QR CODE' &&theme==3){
+        a.status="true";
+        a.key="part1OfKey"
+        res.send(a);
+    }
+    else{
+        a.status="false";
+        a.key="";
+        res.send(a);
+    }
+    
+    else if(qnum==11&&givenAns=='          ANEEEEESH QUESTIONNNNNNNNNNNNNNNN           '&&theme==3){
+        a.status="true";
+        a.key="part1OfKey"
+        res.send(a);
+    }
+    else{
+        a.status="false";
+        a.key="";
+        res.send(a);
+    }
+    
+    else if(qnum==12&&givenAns=='ARPA' &&theme==3){
+        a.status="true";
+        a.key="part1OfKey"
+        res.send(a);
+    }
+    else{
+        a.status="false";
+        a.key="";
+        res.send(a);
+    }
+    
+    
     
     
     
