@@ -20,7 +20,7 @@ const a={
     status:"false",
     key:""
 };
-1.  app.get('/',function(req,res){
+  app.get('/',function(req,res){
     givenAns=req.query.answer;
     qnum=req.query.qnum;
     theme=req.query.theme;
