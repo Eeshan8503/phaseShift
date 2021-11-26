@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+const PORT=process.env.PORT||8000
 export default axios.create({
-  baseURL: `http://localhost:8000`
+  baseURL: `http://localhost:${PORT}`
 });

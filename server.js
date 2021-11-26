@@ -1,15 +1,23 @@
 const express=require("express");
 let cors = require("cors");
 const app=express();
+const http=require('http');
+const PORT=process.env.port || 8000
 app.use(cors());
-app.listen(8000,()=>{
-    console.log("set")
-})
+// app.use(compression())
+app.use(express.json());
+app.use(express.urlencoded({
+  extended: true
+}));
+const path = require('path');
+app.use(express.static(__dirname+'/phaseshift/build'));
+
 const a={
     status:"false",
     key:""
 };
-app.get('/',function(req,res){
+
+app.get('/modal',function(req,res){
     givenAns=req.query.answer.toLowerCase();
     qnum=req.query.qnum;
     theme=req.query.theme;
@@ -105,10 +113,13 @@ app.get('/',function(req,res){
         res.send(a);
     }
     
-    
-    
-    
-        
-    
 })
+app.get('*', (req,res) =>{
+    res.sendFile('index.html', {root: path.join(__dirname, '/phaseshift','/build')});
+});
+const server= http.createServer(app);
+server.listen(PORT,()=>{
+    console.log('server running on: '+PORT)
+});
+        
 

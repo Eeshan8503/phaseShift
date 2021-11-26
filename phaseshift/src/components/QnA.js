@@ -8,7 +8,7 @@ const QnA=(props)=>{
       async function abcd(event){
         event.preventDefault();
         let ans=document.querySelectorAll('.feild')[0].value;
-        let checkk=await api.get(`/?theme=${props.theme}&qnum=${props.num}&answer=${ans}`);
+        let checkk=await api.get(`/modal?theme=${props.theme}&qnum=${props.num}&answer=${ans}`);
         console.log(checkk.data.status);
         setcheck(checkk.data.status);
         setkey(checkk.data.key);
