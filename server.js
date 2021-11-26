@@ -1,8 +1,8 @@
 const express=require("express");
 let cors = require("cors");
 const app=express();
-const http=require('http');
-const PORT=process.env.port || 8000
+//const http=require('http');
+const PORT=process.env.port || 8000;
 app.use(cors());
 // app.use(compression())
 app.use(express.json());
@@ -117,8 +117,8 @@ app.get('/modal',function(req,res){
 app.get('*', (req,res) =>{
     res.sendFile('index.html', {root: path.join(__dirname,'/build')});
 });
-const server= http.createServer(app);
-server.listen(PORT,()=>{
+//const server= http.createServer(app);
+app.listen(PORT,()=>{
     console.log('server running on: '+PORT)
 });
         
