@@ -10,7 +10,7 @@ app.use(express.urlencoded({
   extended: true
 }));
 const path = require('path');
-app.use(express.static(__dirname+'/phaseshift/build'));
+app.use(express.static(__dirname+'/build'));
 
 const a={
     status:"false",
@@ -18,10 +18,10 @@ const a={
 };
 
 app.get('/modal',function(req,res){
-    givenAns=req.query.answer.toLowerCase();
-    qnum=req.query.qnum;
-    theme=req.query.theme;
-    if(qnum==1&&givenAns=='infosys, narayan murthy' || givenAns=='infosys narayan murthy' &&theme==1){
+    var givenAns=req.query.answer.toLowerCase();
+    var qnum=req.query.qnum;
+    var theme=req.query.theme;
+    if(qnum==1 && givenAns=='infosys, narayan murthy' || givenAns=='infosys narayan murthy' && theme==1){
         a.status="true";
         a.key="P36Ggsjlzz"
         res.send(a);
@@ -115,7 +115,7 @@ app.get('/modal',function(req,res){
     
 })
 app.get('*', (req,res) =>{
-    res.sendFile('index.html', {root: path.join(__dirname, '/phaseshift','/build')});
+    res.sendFile('index.html', {root: path.join(__dirname,'/build')});
 });
 const server= http.createServer(app);
 server.listen(PORT,()=>{
