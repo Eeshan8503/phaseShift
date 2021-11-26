@@ -73,14 +73,14 @@ app.get('/modal',function(req,res){
     }
     
     
-    else if(qnum==8&&givenAns=='bombay stock exchange'&&theme==2){
+    else if(qnum==8&&givenAns=='bombay stock exchange' || givenAns=='bse' &&theme==2){
         a.status="true";
         a.key="CxDpejBCgc"
         res.send(a);
     }
     
     
-    else if(qnum==9&&givenAns=='cern, mercedes benz' || givenAns=='cern mercedes benz'&&theme==3){
+    else if(qnum==9&&givenAns=='ibm q system one'&&theme==3){
         a.status="true";
         a.key="FDBBjjwlzQ"
         res.send(a);
